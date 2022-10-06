@@ -204,13 +204,9 @@
         "definitions": {
             "user": {
                 "type": "object",
-                "required": ["videoName",
-                    "description",
-                    "rating",
-                    "tapeCondition",
-                    "price",
-                    "content_warning",
-                    "used"],
+                "required": ["userName",
+                    "password",
+                    "email"],
                 "properties": {
                     "userName": {
                         "type": "string"
