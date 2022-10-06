@@ -1,0 +1,228 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is an api server for a portfolio builder website.\n",
+        "version": "1.0.0",
+        "title": "Portfolio Builder",
+        "contact": {
+            "email": "testuser@test.com"
+        }
+    },
+    "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "schemes": ["https"],
+    "paths": {
+            "/user": {
+                "get": {
+                    "tags": ["user"],
+                    "summary": "Get all user data",
+                    "operationId": "getAll",
+                    "produces": ["application/json"],
+                    "responses": {
+                        "200": {
+                            "description": "successful operation",
+                            "schema": {
+                                "type": "Array"
+                            }
+                        },
+                        "404": {
+                            "description": "Error occurred"
+                        }
+                    }
+                },
+                "post": {
+                    "tags": ["user"],
+                    "summary": "Create new user",
+                    "description": "This is for when a user is created.",
+                    "operationId": "createUSER",
+                    "produces": ["application/json"],
+                    "parameters": [
+                        {
+                            "in": "body",
+                            "name": "body",
+                            "description": "Created user object",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/user"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "successfully created user"
+                        },
+                        "400": {
+                            "description": "Invalid"
+                        }
+                    }
+                }
+            },
+            "/user/{userName}": {
+                "get": {
+                    "tags": ["user"],
+                    "summary": "Get user by name",
+                    "operationId": "getSingleUSER",
+                    "produces": ["application/json"],
+                    "parameters": [
+                        {
+                            "name": "videoName",
+                            "in": "path",
+                            "description": "The name that needs to be fetched.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "successful operation"
+                        },
+                        "400": {
+                            "description": "Invalid Name supplied"
+                        },
+                        "404": {
+                            "description": "Name not found"
+                        }
+                    }
+                }
+            },
+            "/user/{id}": {
+                "get": {
+                    "tags": ["user"],
+                    "summary": "Get user by id",
+                    "operationId": "getSingle",
+                    "produces": ["application/json"],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "description": "The id that needs to be fetched.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "successful operation"
+                        },
+                        "400": {
+                            "description": "Invalid Id supplied"
+                        },
+                        "404": {
+                            "description": "Id not found"
+                        }
+                    }
+                },
+                "put": {
+                    "tags": ["user"],
+                    "summary": "Update user",
+                    "description": "This is for when a user is updated.",
+                    "operationId": "updateUSER",
+                    "produces": ["application/json"],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "description": "The id that needs to be updated.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "in": "body",
+                            "name": "body",
+                            "description": "Updated user object",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/user"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "successfully updated user"
+                        },
+                        "400": {
+                            "description": "Invalid"
+                        }
+                    }
+                },
+                "delete": {
+                    "tags": ["user"],
+                    "summary": "Remove user by name",
+                    "operationId": "deleteUSERNAME",
+                    "produces": ["application/json"],
+                    "parameters": [
+                        {
+                            "name": "videoName",
+                            "in": "path",
+                            "description": "The name that needs to be removed.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "successful operation"
+                        },
+                        "400": {
+                            "description": "Invalid Id supplied"
+                        },
+                        "404": {
+                            "description": "Id not found"
+                        }
+                    }
+                },
+                "delete": {
+                    "tags": ["user"],
+                    "summary": "Remove user by id",
+                    "operationId": "deleteUSER",
+                    "produces": ["application/json"],
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "description": "The id that needs to be removed.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "successful operation"
+                        },
+                        "400": {
+                            "description": "Invalid Id supplied"
+                        },
+                        "404": {
+                            "description": "Id not found"
+                        }
+                    }
+                }
+            },
+            
+        "definitions": {
+            "user": {
+                "type": "object",
+                "required": ["videoName",
+                    "description",
+                    "rating",
+                    "tapeCondition",
+                    "price",
+                    "content_warning",
+                    "used"],
+                "properties": {
+                    "userName": {
+                        "type": "string"
+                    },
+                    "password":{
+                        "type": "string"
+                    },
+                    "email":{
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

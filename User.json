@@ -1,0 +1,18 @@
+{
+    
+        "user": {
+            "userName":"Charile",
+            "password":"weRule1",
+            "email":"email@fake.gmail"
+        },
+        "user": {
+            "userName":"Clare",
+            "password":"letmein",
+            "email":"email@fake.gmail"
+        },
+        "user": {
+            "userName":"Corey",
+            "password":"imherenow",
+            "email":"email@fake.gmail"
+        }
+}

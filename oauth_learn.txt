@@ -1,0 +1,20 @@
+what is OAuth?:
+https://www.youtube.com/watch?v=t4-416mg6iU
+
+Terms:
+https://www.youtube.com/watch?v=3pZ3Nh8tgTE
+
+More Info:
+https://curity.io/product/token-service/?utm_term=oauth%20software&utm_campaign=Curity+Awareness+Campaign+-+USA&utm_source=adwords&utm_medium=ppc&hsa_acc=8214402472&hsa_cam=9100551788&hsa_grp=139898994716&hsa_ad=620216326785&hsa_src=s&hsa_tgt=kwd-927507453580&hsa_kw=oauth%20software&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMIyO3Di4XM-gIVxhXUAR3fNwHNEAAYAiABEgLYlfD_BwE
+
+https://zapier.com/engineering/apikey-oauth-jwt/
+
+
+What is JWT?:
+https://www.youtube.com/watch?v=
+
+
+More Info:
+https://www.youtube.com/watch?v=_XbXkVdoG_0
+
+https://jwt.io/
